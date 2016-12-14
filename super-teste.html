@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+<script>
+	function percorreArray(array, comportamento) {
+
+	    for(var i = 0; i < array.length; i++) {
+
+	        // veja que a função agora esta sendo chamada recebendo um parâmetro
+	        comportamento(array[i]);
+	    }
+
+	}
+
+	var numeros = [1,2,3,4,5,6];
+
+	percorreArray(numeros, function (numero) {
+
+	    if(numero % 2 == 0) {
+	        console.log("Número par - " + numero);
+	    }
+
+	});
+
+	percorreArray(numeros, function (numero) {
+
+	    console.log("Qualquer número - " + numero);
+	});
+
+	percorreArray(numeros, function (numero) {
+
+	    if(numero % 2 != 0) {
+	        console.log("Número ímpar - " + numero);
+	    };
+	});
+</script>
+
+</head>
+<body>
+	
+</body>
+</html>
